@@ -1,0 +1,27 @@
+[
+  {
+    "name": "_Lock screen",
+    "exec": "hyprlock",
+    "icon": "/home/asp/Pictures/Icons/lock.png"
+  },
+  {
+  	"name": "Suspen_d",
+    "exec": "systemctl suspend",
+  	"icon": "/home/asp/Pictures/Icons/suspend.png"
+  },
+  {
+    "name": "Logou_t",
+    "exec": "hyprctl dispatch exit 0",
+    "icon": "/home/asp/Pictures/Icons/logout.png"
+  },
+  {
+    "name": "_Reboot",
+    "exec": "systemctl reboot",
+    "icon": "/home/asp/Pictures/Icons/reboot.png"
+  },
+  {
+    "name": "_Shutdown",
+    "exec": "systemctl -i poweroff",
+    "icon": "/home/asp/Pictures/Icons/shutdown.png"
+  }
+]

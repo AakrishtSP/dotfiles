@@ -1,0 +1,69 @@
+/******************************************************************************
+ * Monokai Color Scheme for Rofi
+ * Classic dark theme with vibrant syntax colors
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Based on: https://monokai.pro/
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* Monokai color palette */
+    charcoal-dark:  #272822;
+    darker-coal:    #1E1F1C;
+    deepest-coal:   #2D2E27;
+    bright-white:   #F8F8F2;
+    silver-gray:    #75715E;
+    electric-blue:  #66D9EF;
+    vibrant-green:  #A6E22E;
+    neon-pink:      #F92672;
+    warm-orange:    #FD971F;
+    golden-yellow:  #E6DB74;
+    soft-purple:    #AE81FF;
+    muted-brown:    #49483E;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* Basic colors */
+    background:                  @charcoal-dark;
+    background-color:            @charcoal-dark;
+    foreground:                  @bright-white;
+    border-color:                @muted-brown;
+    separatorcolor:              @muted-brown;
+    
+    /* Text colors */
+    normal-background:           @charcoal-dark;
+    normal-foreground:           @bright-white;
+    alternate-normal-background: @deepest-coal;
+    alternate-normal-foreground: @bright-white;
+    selected-normal-background:  @electric-blue;
+    selected-normal-foreground:  @charcoal-dark;
+    
+    active-background:           @muted-brown;
+    active-foreground:           @vibrant-green;
+    alternate-active-background: @deepest-coal;
+    alternate-active-foreground: @vibrant-green;
+    selected-active-background:  @vibrant-green;
+    selected-active-foreground:  @charcoal-dark;
+    
+    urgent-background:           @charcoal-dark;
+    urgent-foreground:           @neon-pink;
+    alternate-urgent-background: @deepest-coal;
+    alternate-urgent-foreground: @neon-pink;
+    selected-urgent-background:  @neon-pink;
+    selected-urgent-foreground:  @charcoal-dark;
+}

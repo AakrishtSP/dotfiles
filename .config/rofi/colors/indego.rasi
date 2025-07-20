@@ -1,0 +1,72 @@
+/******************************************************************************
+ * Indego Color Scheme for Rofi
+ * Deep blue and purple indigo color scheme
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Inspired by: Dave Davenport
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* Indego color palette */
+    indigo-deep:     #1A237E;
+    indigo-primary:  #283593;
+    indigo-accent:   #3F51B5;
+    frost-white:     #E8EAF6;
+    silver-text:     #C5CAE9;
+    teal-accent:     #00695C;
+    cyan-light:      #B2EBF2;
+    red-warning:     #B71C1C;
+    pink-alert:      #FFCDD2;
+    amber-active:    #DF6E00;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* Basic colors */
+    background:              @indigo-deep;
+    background-color:        transparent;
+    background-alt:          @indigo-primary;
+    foreground:              @frost-white;
+    selected:                @indigo-accent;
+    active:                  @teal-accent;
+    urgent:                  @red-warning;
+    border-color:            @frost-white;
+    separatorcolor:          @frost-white;
+    scrollbar-handle:        @silver-text;
+    
+    /* Text colors */
+    normal-background:       rgba(152, 108, 128, 0.03);
+    normal-foreground:       @foreground;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @frost-white;
+    
+    active-background:       rgba(223, 110, 0, 0.06);
+    active-foreground:       @cyan-light;
+    alternate-active-background: @active;
+    alternate-active-foreground: @cyan-light;
+    selected-active-background:  @cyan-light;
+    selected-active-foreground:  @teal-accent;
+    
+    urgent-background:       rgba(223, 110, 0, 0.06);
+    urgent-foreground:       @pink-alert;
+    alternate-urgent-background: @urgent;
+    alternate-urgent-foreground: @pink-alert;
+    selected-urgent-background:  @pink-alert;
+    selected-urgent-foreground:  @red-warning;
+}

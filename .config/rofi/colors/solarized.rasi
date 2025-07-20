@@ -1,0 +1,83 @@
+/******************************************************************************
+ * Solarized Enhanced Color Scheme for Rofi
+ * Based on Solarized color scheme by Ethan Schoonover
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Inspired by: Rasmus Steinke
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+
+    /* Solarized color palette */
+    base03:          #002B36;
+    base02:          #073642;
+    base01:          #586E75;
+    base00:          #657B83;
+    base0:           #839496;
+    base1:           #93A1A1;
+    base2:           #EEE8D5;
+    base3:           #FDF6E3;
+    yellow:          #B58900;
+    orange:          #CB4B16;
+    red:             #DC322F;
+    magenta:         #D33682;
+    violet:          #6C71C4;
+    blue:            #268BD2;
+    cyan:            #2AA198;
+    green:           #859900;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    
+    /* Basic colors */
+    background:              @base03;
+    background-alt:          @base02;
+    foreground:              @base0;
+    selected:                @blue;
+    active:                  @green;
+    urgent:                  @red;
+    
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @base01;
+    separatorcolor:          @base01;
+    scrollbar-handle:        @base00;
+    
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    text-secondary:          @base1;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @base3;
+    
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @active;
+    selected-active-foreground:  @base3;
+    
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @base3;
+}

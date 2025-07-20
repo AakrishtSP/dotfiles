@@ -1,0 +1,77 @@
+/******************************************************************************
+ * Adapta-Nokto Color Scheme for Rofi
+ * Based on Adapta-Nokto GTK theme (https://github.com/adapta-project/adapta-gtk-theme)
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Inspired by: PyGeek03
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+
+    /* Adapta-Nokto color palette */
+    slate-base:      #3A4C54;
+    slate-surface:   #455A64;
+    slate-overlay:   #546E7A;
+    frost-text:      #FAFBFC;
+    muted-text:      #C3C6C8;
+    teal-accent:     #00BCD4;
+    green-accent:    #009688;
+    red-alert:       #FF5252;
+    blue-info:       #268BD2;
+    border-dim:      #2A373E;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    
+    /* Basic colors */
+    background:              @slate-base;
+    background-alt:          @slate-surface;
+    foreground:              @frost-text;
+    selected:                @teal-accent;
+    active:                  @green-accent;
+    urgent:                  @red-alert;
+    
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @border-dim;
+    separatorcolor:          @muted-text;
+    scrollbar-handle:        @slate-overlay;
+    
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    text-secondary:          @muted-text;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @frost-text;
+    
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @active;
+    selected-active-foreground:  @frost-text;
+    
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @frost-text;
+}

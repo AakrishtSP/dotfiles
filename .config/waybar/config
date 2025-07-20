@@ -1,0 +1,49 @@
+[
+  {
+    "layer": "top", // Waybar at top layer
+    "output": "eDP-1", // Output name
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 40,
+    // "width":1920,
+    "margin": "5 5 0 5",
+    "spacing": 0,
+
+    //include modules from external file
+    "include" : ["~/.config/waybar/modules.jsonc"],
+
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["mpris"],
+    "modules-right": [
+      "group/tray-expand",
+      "custom/updates",
+      "idle_inhibitor",
+      "battery",
+      "pulseaudio",
+      "network",
+      "clock"
+    ]
+  },
+  {
+    "layer": "top", // Waybar at top layer
+    "output": "HDMI-A-1", // Output name
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 30,
+    // "width":1920,
+    "margin": "0 5 0 5",
+    "spacing": 0,
+
+    //include modules
+    "include" : ["~/.config/waybar/modules.jsonc"],
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["mpris"],
+    "modules-right": [
+      "custom/network_traffic",
+      "idle_inhibitor",
+      "battery", 
+      "pulseaudio", 
+      "clock"
+    ]
+  }
+]

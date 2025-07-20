@@ -1,0 +1,69 @@
+/******************************************************************************
+ * OneDark Color Scheme for Rofi
+ * Atom's One Dark inspired color theme
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Based on: https://github.com/atom/one-dark-syntax
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* OneDark color palette */
+    atom-dark:      #1E2127;
+    darker-void:    #282B31;
+    deepest-void:   #21252B;
+    pure-white:     #FFFFFF;
+    soft-white:     #ABB2BF;
+    atom-blue:      #61AFEF;
+    atom-green:     #98C379;
+    atom-pink:      #E06C75;
+    atom-purple:    #C678DD;
+    atom-cyan:      #56B6C2;
+    comment-gray:   #5C6370;
+    gutter-gray:    #4B5263;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* Basic colors */
+    background:                  @atom-dark;
+    background-color:            @atom-dark;
+    foreground:                  @pure-white;
+    border-color:                @gutter-gray;
+    separatorcolor:              @gutter-gray;
+    
+    /* Text colors */
+    normal-background:           @atom-dark;
+    normal-foreground:           @pure-white;
+    alternate-normal-background: @darker-void;
+    alternate-normal-foreground: @pure-white;
+    selected-normal-background:  @atom-blue;
+    selected-normal-foreground:  @atom-dark;
+    
+    active-background:           @comment-gray;
+    active-foreground:           @atom-green;
+    alternate-active-background: @darker-void;
+    alternate-active-foreground: @atom-green;
+    selected-active-background:  @atom-green;
+    selected-active-foreground:  @atom-dark;
+    
+    urgent-background:           @atom-dark;
+    urgent-foreground:           @atom-pink;
+    alternate-urgent-background: @darker-void;
+    alternate-urgent-foreground: @atom-pink;
+    selected-urgent-background:  @atom-pink;
+    selected-urgent-foreground:  @atom-dark;
+}

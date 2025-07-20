@@ -1,0 +1,80 @@
+/******************************************************************************
+ * Ocean Blue Color Scheme for Rofi
+ * Vibrant blue color scheme inspired by ocean depths
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Inspired by: Ocean Blue themes
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+
+    /* Ocean Blue color palette */
+    deep-blue:      #0060A0;
+    dark-ocean:     #004080;
+    midnight-blue:  #003366;
+    bright-cyan:    #00B0EF;
+    light-cyan:     #80D8FF;
+    electric-blue:  #268BD2;
+    sky-blue:       #87CEEB;
+    coral-pink:     #FFA0A0;
+    mint-green:     #A0FFA0;
+    azure-white:    #F0F8FF;
+    steel-blue:     #4682B4;
+    ocean-gray:     #5F7F9F;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    
+    
+    /* Basic colors */
+    background:              @deep-blue;
+    background-alt:          @dark-ocean;
+    foreground:              @azure-white;
+    selected:                @bright-cyan;
+    active:                  @mint-green;
+    urgent:                  @coral-pink;
+    
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @steel-blue;
+    separatorcolor:          @steel-blue;
+    scrollbar-handle:        @ocean-gray;
+    
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    text-secondary:          @light-cyan;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @deep-blue;
+    
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @active;
+    selected-active-foreground:  @deep-blue;
+    
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @deep-blue;
+}

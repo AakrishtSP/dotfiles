@@ -1,0 +1,72 @@
+/******************************************************************************
+ * Rose Pine Color Scheme for Rofi
+ * All natural pine, faux fur and a bit of soho vibes
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Based on: https://github.com/rose-pine/rose-pine
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* Rose Pine color palette */
+    rose-base:           #191724;
+    rose-surface:        #1f1d2e;
+    rose-overlay:        #26233a;
+    rose-muted:          #6e6a86;
+    rose-subtle:         #908caa;
+    rose-text:           #e0def4;
+    rose-love:           #eb6f92;
+    rose-gold:           #f6c177;
+    rose-rose:           #ebbcba;
+    rose-pine:           #31748f;
+    rose-foam:           #9ccfd8;
+    rose-iris:           #c4a7e7;
+    highlight-low:       #21202e;
+    highlight-med:       #403d52;
+    highlight-high:      #524f67;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* Basic colors */
+    background:                  @rose-base;
+    background-color:            @rose-base;
+    foreground:                  @rose-text;
+    border-color:                @rose-muted;
+    separatorcolor:              @rose-muted;
+    
+    /* Text colors */
+    normal-background:           @rose-base;
+    normal-foreground:           @rose-text;
+    alternate-normal-background: @rose-surface;
+    alternate-normal-foreground: @rose-text;
+    selected-normal-background:  @rose-rose;
+    selected-normal-foreground:  @rose-base;
+    
+    active-background:           @rose-overlay;
+    active-foreground:           @rose-foam;
+    alternate-active-background: @rose-surface;
+    alternate-active-foreground: @rose-foam;
+    selected-active-background:  @rose-foam;
+    selected-active-foreground:  @rose-base;
+    
+    urgent-background:           @rose-base;
+    urgent-foreground:           @rose-love;
+    alternate-urgent-background: @rose-surface;
+    alternate-urgent-foreground: @rose-love;
+    selected-urgent-background:  @rose-love;
+    selected-urgent-foreground:  @rose-base;
+}

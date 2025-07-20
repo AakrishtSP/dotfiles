@@ -1,0 +1,79 @@
+/******************************************************************************
+ * Commodore 64 Color Scheme for Rofi
+ * Retro computing inspired color scheme from the legendary C64
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Inspired by: Rasmus Steinke
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+
+    /* C64 color palette */
+    c64-blue:        #0039FF;
+    c64-blue-light:  #4F80FF;
+    c64-white:       #FFFFFF;
+    c64-cyan:        #7ABFC7;
+    c64-purple:      #8B3F96;
+    c64-green:       #68BA50;
+    c64-red:         #6F3D86;
+    c64-yellow:      #BFD35A;
+    c64-orange:      #B86962;
+    c64-brown:       #6C5EB5;
+    c64-gray:        #959595;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    
+    
+    /* Basic colors */
+    background:              @c64-blue;
+    background-alt:          @c64-blue-light;
+    foreground:              @c64-white;
+    selected:                @c64-cyan;
+    active:                  @c64-green;
+    urgent:                  @c64-orange;
+    
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @c64-blue-light;
+    separatorcolor:          @c64-blue-light;
+    scrollbar-handle:        @c64-cyan;
+    
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    text-secondary:          @c64-gray;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @c64-white;
+    
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @active;
+    selected-active-foreground:  @c64-white;
+    
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @c64-white;
+}

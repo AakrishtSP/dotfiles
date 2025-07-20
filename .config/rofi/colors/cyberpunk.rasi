@@ -1,0 +1,79 @@
+/******************************************************************************
+ * Cyberpunk Enhanced Color Scheme for Rofi
+ * Neon-inspired cyberpunk aesthetic with electric colors
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Github: @AakrishtSP
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+
+    /* Cyberpunk color palette */
+    background-dark: #000B1E;
+    dark-layer:     #0A1528;
+    deeper:         #051019;
+    neon-cyan:      #0ABDC6;
+    dim-cyan:       #0A9BA3;
+    electric-blue:  #0ABDC6;
+    neon-green:     #00FF00;
+    neon-pink:      #FF00FF;
+    neon-purple:    #8A2BE2;
+    bright-blue:    #0080FF;
+    grid-layer:     #1A2332;
+    border-glow:    #2A3342;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    
+    /* Basic colors */
+    background:              @background-dark;
+    background-alt:          @dark-layer;
+    foreground:              @neon-cyan;
+    selected:                @electric-blue;
+    active:                  @neon-green;
+    urgent:                  #FF0000;
+    
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @border-glow;
+    separatorcolor:          @border-glow;
+    scrollbar-handle:        @grid-layer;
+    
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    text-secondary:          @dim-cyan;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @background-dark;
+    
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @active;
+    selected-active-foreground:  @background-dark;
+    
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @background-dark;
+}

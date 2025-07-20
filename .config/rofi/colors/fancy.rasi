@@ -1,0 +1,74 @@
+/******************************************************************************
+ * Fancy Color Scheme for Rofi
+ * Modern floating design with transparency effects
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Inspired by: Dave Davenport
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+
+    /* Fancy color palette */
+    dark-base:       #272822;
+    dark-surface:    #141511;
+    bright-text:     #F8F8F2;
+    accent-green:    #A6E22E;
+    accent-pink:     #F92672;
+    accent-blue:     #66D9EF;
+    accent-yellow:   #E6DB74;
+    muted-gray:      #75715E;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    
+    /* Basic colors */
+    background:              @dark-base;
+    background-alt:          @dark-surface;
+    foreground:              @bright-text;
+    selected:                @dark-surface;
+    active:                  @accent-green;
+    urgent:                  @accent-pink;
+    
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @muted-gray;
+    separatorcolor:          @accent-yellow;
+    scrollbar-handle:        @muted-gray;
+    
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    text-secondary:          @muted-gray;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @bright-text;
+    
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @selected;
+    selected-active-foreground:  @active;
+    
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+}

@@ -1,0 +1,81 @@
+/******************************************************************************
+ * Arc-Dark Color Scheme for Rofi
+ * Based on Arc-Dark GTK theme (https://github.com/horst3180/arc-theme)
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Inspired by: leofa
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+
+    /* Arc-Dark color palette */
+    dark-base:       #2D303B;
+    dark-surface:    #404552;
+    light-surface:   #4B5162;
+    frost-text:      #F9F9F9;
+    muted-text:      #C4C7C5;
+    blue-accent:     #4084D6;
+    sky-accent:      #4491ED;
+    teal-accent:     #65A1FF;
+    red-alert:       #A54242;
+    border-subtle:   #7C8389;
+    separator-dark:  #1D1F21;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    
+    
+    /* Basic colors */
+    background:              @dark-base;
+    background-alt:          @dark-surface;
+    foreground:              @frost-text;
+    selected:                @blue-accent;
+    active:                  @teal-accent;
+    urgent:                  @red-alert;
+    
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @border-subtle;
+    separatorcolor:          @separator-dark;
+    scrollbar-handle:        @light-surface;
+    
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    text-secondary:          @muted-text;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @frost-text;
+    
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @sky-accent;
+    selected-active-foreground:  @frost-text;
+    
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @frost-text;
+}
+
+

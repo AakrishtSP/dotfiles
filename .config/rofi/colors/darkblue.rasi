@@ -1,0 +1,79 @@
+/******************************************************************************
+ * Dark Blue Enhanced Color Scheme for Rofi
+ * Deep blue theme with navy and midnight tones
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Github: @AakrishtSP
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+
+    /* Dark Blue color palette */
+    navy-depth:     #000021;
+    midnight-blue:  #02143F;
+    deep-indigo:    #001133;
+    cream-light:    #DBDFBC;
+    pale-yellow:    #F4F6E7;
+    electric-blue:  #268BD2;
+    sky-cyan:       #8AC4FF;
+    neon-purple:    #FF81FF;
+    steel-blue:     #4A6FA5;
+    royal-blue:     #1E3A8A;
+    storm-gray:     #2C3E50;
+    shadow-blue:    #1A2A3A;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    
+    /* Basic colors */
+    background:              @navy-depth;
+    background-alt:          @deep-indigo;
+    foreground:              @cream-light;
+    selected:                @cream-light;
+    active:                  @sky-cyan;
+    urgent:                  @neon-purple;
+    
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @shadow-blue;
+    separatorcolor:          @shadow-blue;
+    scrollbar-handle:        @storm-gray;
+    
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    text-secondary:          @pale-yellow;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @midnight-blue;
+    
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @active;
+    selected-active-foreground:  @midnight-blue;
+    
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @midnight-blue;
+}

@@ -1,0 +1,72 @@
+/******************************************************************************
+ * Material Color Scheme for Rofi
+ * Material Design inspired color theme
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Based on: https://github.com/ntpeters/base16-materialtheme-scheme
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* Material design color palette */
+    material-dark:      #263238;
+    surface-dark:       #2E3C43;
+    surface-light:      #314549;
+    material-gray:      #546E7A;
+    light-surface:      #B2CCD6;
+    pure-white:         #EEFFFF;
+    bright-white:       #FFFFFF;
+    coral-red:          #F07178;
+    warm-orange:        #F78C6C;
+    golden-yellow:      #FFCB6B;
+    nature-green:       #C3E88D;
+    ocean-cyan:         #89DDFF;
+    sky-blue:          #82AAFF;
+    lavender-purple:    #C792EA;
+    accent-red:         #FF5370;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    /* Basic colors */
+    background:                  @material-dark;
+    background-color:            @material-dark;
+    foreground:                  @pure-white;
+    border-color:                @surface-light;
+    separatorcolor:              @surface-light;
+    
+    /* Text colors */
+    normal-background:           @material-dark;
+    normal-foreground:           @pure-white;
+    alternate-normal-background: @surface-dark;
+    alternate-normal-foreground: @pure-white;
+    selected-normal-background:  @sky-blue;
+    selected-normal-foreground:  @material-dark;
+    
+    active-background:           @material-gray;
+    active-foreground:           @nature-green;
+    alternate-active-background: @surface-dark;
+    alternate-active-foreground: @nature-green;
+    selected-active-background:  @nature-green;
+    selected-active-foreground:  @material-dark;
+    
+    urgent-background:           @material-dark;
+    urgent-foreground:           @accent-red;
+    alternate-urgent-background: @surface-dark;
+    alternate-urgent-foreground: @accent-red;
+    selected-urgent-background:  @accent-red;
+    selected-urgent-foreground:  @material-dark;
+}

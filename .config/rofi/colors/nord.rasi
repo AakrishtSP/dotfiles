@@ -1,0 +1,62 @@
+/******************************************************************************
+ * Nord Color Scheme for Rofi
+ * Colors adapted from: https://nordtheme.com/
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Github: @AakrishtSP
+ ******************************************************************************/
+
+* {
+    /* Nord color palette */
+    polar-night:     #2E3440;
+    darker-night:    #383E4A;
+    deep-night:      #242933;
+    snow-storm:      #E5E9F0;
+    frost-mist:      #D8DEE9;
+    frost-blue:      #81A1C1;
+    aurora-green:    #A3BE8C;
+    aurora-pink:     #B48EAD;
+    aurora-purple:   #B988B0;
+    aurora-blue:     #5E81AC;
+    ice-surface:     #434C5E;
+    shadow-layer:    #3B4252;
+    aurora-red:      #BF616A;
+    
+    /* Interface colors */
+    background:              @polar-night;
+    background-alt:          @darker-night;
+    foreground:              @snow-storm;
+    selected:                @frost-blue;
+    active:                  @aurora-green;
+    urgent:                  @aurora-red;
+    
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @shadow-layer;
+    separatorcolor:          @shadow-layer;
+    scrollbar-handle:        @ice-surface;
+    silver-muted:            @frost-mist;
+    
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @polar-night;
+    
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @active;
+    selected-active-foreground:  @polar-night;
+    
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @polar-night;
+}
+
+

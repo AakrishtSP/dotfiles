@@ -1,0 +1,5 @@
+#!/bin/sh
+cd ~
+# user preferred settings
+
+webcord &

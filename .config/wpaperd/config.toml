@@ -1,0 +1,24 @@
+[default]
+# Duration before changing wallpaper (default: "30m")
+duration = "30m"
+
+# Sorting order: "ascending", "descending", "random" (default: "random")
+sorting = "random"
+
+# Wallpaper display mode: "fill", "fit", "stretch", "tile", "center" (default: "fit")
+mode = "fit"
+
+# Transition duration in milliseconds (default: 300ms)
+transition-time = 300
+
+# Offset for positioning (default: 0.5)
+offset = 0.5
+
+# Maximum number of wallpapers in queue (default: 10)
+queue-size = 10
+
+# Enable initial transition effect on startup (default: true)
+initial-transition = true
+
+# Custom wallpaper directory (default: empty)
+path = "~/.local/wallpapers"

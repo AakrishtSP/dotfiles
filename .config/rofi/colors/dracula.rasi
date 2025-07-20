@@ -1,0 +1,79 @@
+/******************************************************************************
+ * Dracula Color Scheme for Rofi
+ * Based on Dracula theme (https://draculatheme.com/)
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Github: @AakrishtSP
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+
+    /* Dracula color palette */
+    background-dark:  #282A36;
+    current-line:     #44475A;
+    foreground-light: #F8F8F2;
+    comment-gray:     #6272A4;
+    cyan-bright:      #8BE9FD;
+    green-bright:     #50FA7B;
+    orange-bright:    #FFB86C;
+    pink-bright:      #FF79C6;
+    purple-bright:    #BD93F9;
+    red-bright:       #FF5555;
+    yellow-bright:    #F1FA8C;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    
+    /* Basic colors */
+    background:              @background-dark;
+    background-alt:          @current-line;
+    foreground:              @foreground-light;
+    selected:                @purple-bright;
+    active:                  @green-bright;
+    urgent:                  @red-bright;
+    
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @comment-gray;
+    separatorcolor:          @comment-gray;
+    scrollbar-handle:        @comment-gray;
+    
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    text-secondary:          @comment-gray;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @background-dark;
+    
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @active;
+    selected-active-foreground:  @background-dark;
+    
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @background-dark;
+}
+

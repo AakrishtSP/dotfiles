@@ -1,0 +1,93 @@
+/******************************************************************************
+ * Everforest Enhanced Color Scheme for Rofi
+ * Based on Everforest theme (https://github.com/sainnhe/everforest)
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Github: @AakrishtSP
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+
+    /* Everforest Dark color palette */
+    bg-dim:         #1E2326;
+    bg0:            #272E33;
+    bg1:            #2E383C;
+    bg2:            #374145;
+    bg3:            #414B50;
+    bg4:            #495156;
+    bg5:            #4F5B58;
+    bg-visual:      #4C3743;
+    bg-red:         #493B40;
+    bg-green:       #3C4841;
+    bg-blue:        #384B55;
+    bg-yellow:      #45443C;
+    fg:             #D3C6AA;
+    red:            #E67E80;
+    orange:         #E69875;
+    yellow:         #DBBC7F;
+    green:          #A7C080;
+    aqua:           #83C092;
+    blue:           #7FBBB3;
+    purple:         #D699B6;
+    grey0:          #7A8478;
+    grey1:          #859289;
+    grey2:          #9DA9A0;
+    statusline1:    #A7C080;
+    statusline2:    #D3C6AA;
+    statusline3:    #E67E80;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    
+    /* Basic colors */
+    background:              @bg0;
+    background-alt:          @bg1;
+    foreground:              @fg;
+    selected:                @statusline1;
+    active:                  @green;
+    urgent:                  @red;
+    
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @bg3;
+    separatorcolor:          @grey0;
+    scrollbar-handle:        @bg2;
+    
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    text-secondary:          @grey1;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @bg0;
+    
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @active;
+    selected-active-foreground:  @bg0;
+    
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @bg0;
+}

@@ -1,0 +1,20 @@
+#!/bin/sh
+cd ~
+# user preferred settings
+
+#cursor size
+export XCURSOR_SIZE=24
+
+# text editor
+export MICRO_TRUECOLOR=1
+export EDITOR=code
+
+#browser
+export BROWSER=firefox
+#terminal
+export TERM=foot
+export TERMINAL=foot
+#mail
+export MAIL=thunderbird
+
+# check /usr/local/bin/hyprstart 

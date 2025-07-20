@@ -1,0 +1,93 @@
+/******************************************************************************
+ * Catppuccin Mocha Color Scheme for Rofi
+ * Based on Catppuccin color scheme (https://github.com/catppuccin/catppuccin)
+ * Author: Aakrisht Sharma Paudel (AakrishtSP)
+ * Inspired by: Catppuccin team
+ ******************************************************************************/
+
+* {
+/******************************************************************************
+ ____                    ____      _                
+| __ )  __ _ ___  ___   / ___|___ | | ___  _ __ ___ 
+|  _ \ / _` / __|/ _ \ | |   / _ \| |/ _ \| '__/ __|
+| |_) | (_| \__ \  __/ | |__| (_) | | (_) | |  \__ \
+|____/ \__,_|___/\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+
+    /* Catppuccin Mocha color palette */
+    base:           #1E1E2E;
+    mantle:         #181825;
+    crust:          #11111B;
+    text:           #CDD6F4;
+    subtext1:       #BAC2DE;
+    subtext0:       #A6ADC8;
+    overlay2:       #9399B2;
+    overlay1:       #7F849C;
+    overlay0:       #6C7086;
+    surface2:       #585B70;
+    surface1:       #45475A;
+    surface0:       #313244;
+    lavender:       #B4BEFE;
+    blue:           #89B4FA;
+    sapphire:       #74C7EC;
+    sky:            #89DCEB;
+    teal:           #94E2D5;
+    green:          #A6E3A1;
+    yellow:         #F9E2AF;
+    peach:          #FAB387;
+    maroon:         #EBA0AC;
+    red:            #F38BA8;
+    mauve:          #CBA6F7;
+    pink:           #F5C2E7;
+    flamingo:       #F2CDCD;
+    rosewater:      #F5E0DC;
+
+/******************************************************************************
+ ___       _             __                   ____      _                
+|_ _|_ __ | |_ ___ _ __ / _| __ _  ___ ___   / ___|___ | | ___  _ __ ___ 
+ | || '_ \| __/ _ \ '__| |_ / _` |/ __/ _ \ | |   / _ \| |/ _ \| '__/ __|
+ | || | | | ||  __/ |  |  _| (_| | (_|  __/ | |__| (_) | | (_) | |  \__ \
+|___|_| |_|\__\___|_|  |_|  \__,_|\___\___|  \____\___/|_|\___/|_|  |___/
+
+******************************************************************************/
+
+    
+    /* Basic colors */
+    background:              @base;
+    background-alt:          @surface0;
+    foreground:              @text;
+    selected:                @mauve;
+    active:                  @blue;
+    urgent:                  @red;
+    
+    /* Derived colors */
+    background-color:        transparent;
+    border-color:            @surface1;
+    separatorcolor:          @overlay0;
+    scrollbar-handle:        @surface2;
+    
+    /* Text colors */
+    normal-background:       transparent;
+    normal-foreground:       @foreground;
+    text-secondary:          @subtext0;
+    alternate-normal-background: @background-alt;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @selected;
+    selected-normal-foreground:  @base;
+    
+    active-background:       transparent;
+    active-foreground:       @active;
+    alternate-active-background: @background-alt;
+    alternate-active-foreground: @active;
+    selected-active-background:  @active;
+    selected-active-foreground:  @base;
+    
+    urgent-background:       transparent;
+    urgent-foreground:       @urgent;
+    alternate-urgent-background: @background-alt;
+    alternate-urgent-foreground: @urgent;
+    selected-urgent-background:  @urgent;
+    selected-urgent-foreground:  @base;
+}

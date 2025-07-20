@@ -1,0 +1,9 @@
+wofi
+mako
+polkit-gnome
+thunar
+xorg-xrdb
+foot
+wl-clipboard
+wev
+grim
