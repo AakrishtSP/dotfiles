@@ -1,183 +1,185 @@
 {
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "on-click": "activate",
-    "all-outputs": false,
-    "sort-by-number": true,
-    "show-special": true,
-    "special-visible-only": true,
-    "format-icons": {
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "10": "10",
-      "11": "1",
-      "12": "2",
-      "13": "3",
-      "14": "4",
-      "15": "5",
-      "16": "6",
-      "17": "7",
-      "18": "8",
-      "19": "9",
-      "20": "10",
-      "spotify": "",
-      "discord": "",
-      "terminal": "",
-      "focused": "",
-      "default": ""
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "all-outputs": false,
+        "sort-by-number": true,
+        "show-special": true,
+        "special-visible-only": true,
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10",
+            "11": "1",
+            "12": "2",
+            "13": "3",
+            "14": "4",
+            "15": "5",
+            "16": "6",
+            "17": "7",
+            "18": "8",
+            "19": "9",
+            "20": "10",
+            "spotify": "",
+            "discord": "",
+            "terminal": "",
+            "focused": "",
+            "default": ""
+        },
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
     },
-    "on-scroll-down": "hyprctl dispatch workspace e-1"
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "timeout": 600
     },
-    "timeout": 600
-  },
-  "hyprland/window": {
-    "format": "{}",
-    "icon": true,
-    "icon-size": 16,
-    "max-length": 50,
-    "separate-outputs": true,
-    // "format": "{initialClass}", 
-    "rewrite": {
-      "(.*) — Mozilla Firefox": "FireFox",
-      "(.*) — Zen Browser": "$1"
+    "hyprland/window": {
+        "format": "{}",
+        "icon": true,
+        "icon-size": 16,
+        "max-length": 50,
+        "separate-outputs": true,
+        // "format": "{initialClass}", 
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "FireFox",
+            "(.*) — Zen Browser": "$1"
+        }
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 6,
+        "show-passive-items": true,
+        "reverse-direction": false
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " {:%I:%M %p}", //12 hour format
+        //"format": " {:%a %d %b  %H:%M}",	//24 hour format
+        "format-alt": " {:%H:%M:%S}",
+        "interval": 1,
+        "on-click-middle": "~/.config/waybar/scripts/OCV"
+    },
+    "battery": {
+        "format": "{icon} {capacity: >3}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "format-charging": "󰂄 {capacity: >3}%",
+        "format-full": "{icon}",
+        "tooltip": true,
+        "tooltip-format": "Battery: {capacity}%\n{timeTo}"
+    },
+    "network": {
+        //"interface": "wlp0s20f3", // (Optional) To force the use of this interface  "format-wifi": "  {essid}",
+        "format": "⚠Disabled",
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "⚠Disabled",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "family": "ipv4",
+        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+        //"min-length": 2,
+        //"max-length": 2,
+        "on-click-middle": "nm-connection-editor"
+    },
+    "custom/updates": {
+        "format": "{} {icon}",
+        "return-type": "json",
+        "format-icons": {
+            "has-updates": "󱍷",
+            "updated": "󰂪",
+            "interval": 7200
+        },
+        "exec-if": "which waybar-module-pacman-updates",
+        "exec": "waybar-module-pacman-updates",
+        "on-click": "foot -e paru -Syu"
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "nwgbar",
+        "tooltip": false
+    },
+    "custom/network_traffic": {
+        "exec": "~/.config/waybar/scripts/network_traffic.sh",
+        "return-type": "json",
+        "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}" // optional
+    },
+    "pulseaudio": {
+        "scroll-step": 3, // %, can be a float
+        "format": "{icon} {volume}% ",
+        "format-bluetooth": "{volume}% ",
+        //"format-source": "{volume}% ",
+        //"format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click-middle": "pavucontrol",
+        "on-click-left": "pamixer --toggle-mute"
+    },
+    "mpris": {
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "player-icons": {
+            "default": " ",
+            "spotify": " "
+        },
+        "ignored-players": [
+            "firefox"
+        ],
+        "status-icons": {
+            "paused": "󰏤 "
+        },
+        "dynamic-order": [
+            "title",
+            "artist"
+        ],
+        "dynamic-importance-order": [
+            "title",
+            "artist"
+        ],
+        "dynamic-len": 30,
+        "dynamic-separator": " - ",
+        "interval": 1
+    },
+    "group/tray-expand": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 300,
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/tray-wrap",
+            "tray"
+        ]
+    },
+    "custom/tray-wrap": {
+        "format": "󱊘",
+        "tooltip": false
     }
-  },
-  "tray": {
-    "icon-size": 18,
-    "spacing": 6,
-    "show-passive-items": true,
-    "reverse-direction": false
-  },
-  "clock": {
-    "tooltip-format": "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>",
-    "format": " {:%I:%M %p}", //12 hour format
-    //"format": " {:%a %d %b  %H:%M}",	//24 hour format
-    "format-alt": " {:%H:%M:%S}",
-    "interval": 1,
-    "on-click-middle": "~/.config/waybar/scripts/OCV"
-  },
-  "battery": {
-    "format": "{icon} {capacity: >3}%",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "format-charging": "󰂄 {capacity: >3}%",
-    "format-full": "{icon}",
-    "tooltip": true,
-    "tooltip-format": "Battery: {capacity}%\n{timeTo}"
-  },
-  "network": {
-    //"interface": "wlp0s20f3", // (Optional) To force the use of this interface  "format-wifi": "  {essid}",
-    "format": "⚠Disabled",
-    "format-wifi": "",
-    "format-ethernet": "",
-    "format-linked": "{ifname} (No IP)",
-    "format-disconnected": "⚠Disabled",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
-    "family": "ipv4",
-    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
-    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
-    //"min-length": 2,
-    //"max-length": 2,
-    "on-click-middle": "nm-connection-editor"
-  },
-  "custom/updates": {
-    "format": "{} {icon}",
-    "return-type": "json",
-    "format-icons": {
-      "has-updates": "󱍷",
-      "updated": "󰂪",
-      "interval": 7200
-    },
-    "exec-if": "which waybar-module-pacman-updates",
-    "exec": "waybar-module-pacman-updates",
-    "on-click": "foot -e paru -Syu"
-  },
-  "custom/power": {
-    "format": "⏻",
-    "on-click": "nwgbar",
-    "tooltip": false
-  },
-  "custom/network_traffic": {
-    "exec": "~/.config/waybar/scripts/network_traffic.sh",
-    "return-type": "json",
-    "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}" // optional
-  },
-  "pulseaudio": {
-    "scroll-step": 3, // %, can be a float
-    "format": "{icon} {volume}% ",
-    "format-bluetooth": "{volume}% ",
-    //"format-source": "{volume}% ",
-    //"format-source-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    },
-    "on-click-middle": "pavucontrol",
-    "on-click-left": "pamixer --toggle-mute"
-  },
-  "mpris": {
-    "format": "{player_icon} {dynamic}",
-    "format-paused": "{status_icon} <i>{dynamic}</i>",
-    "player-icons": {
-      "default": " ",
-      "spotify": " "
-    },
-    // "ignored-players": ["firefox"],
-    "status-icons": {
-      "paused": "󰏤 "
-    },
-    "dynamic-order": [
-      "title",
-      "artist"
-    ],
-    "dynamic-importance-order": [
-      "title",
-      "artist"
-    ],
-    "dynamic-len": 30,
-    "dynamic-separator": " - ",
-    "interval": 1
-  },
-  "group/tray-expand": {
-    "orientation": "horizontal",
-    "drawer": {
-      "transition-duration": 300,
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "custom/tray-wrap",
-      "tray"
-    ]
-  },
-  "custom/tray-wrap": {
-    "format": "󱊘",
-    "tooltip": false
-  }
 }
