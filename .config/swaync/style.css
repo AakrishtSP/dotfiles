@@ -1,0 +1,355 @@
+/* Catppuccin Mocha Theme for SwayNC */
+@define-color ctp-rosewater #f5e0dc;
+@define-color ctp-flamingo #f2cdcd;
+@define-color ctp-pink #f5c2e7;
+@define-color ctp-mauve #cba6f7;
+@define-color ctp-red #f38ba8;
+@define-color ctp-maroon #eba0ac;
+@define-color ctp-peach #fab387;
+@define-color ctp-yellow #f9e2af;
+@define-color ctp-green #a6e3a1;
+@define-color ctp-teal #94e2d5;
+@define-color ctp-sky #89dceb;
+@define-color ctp-sapphire #74c7ec;
+@define-color ctp-blue #89b4fa;
+@define-color ctp-lavender #b4befe;
+@define-color ctp-text #cdd6f4;
+@define-color ctp-subtext1 #bac2de;
+@define-color ctp-subtext0 #a6adc8;
+@define-color ctp-overlay2 #9399b2;
+@define-color ctp-overlay1 #7f849c;
+@define-color ctp-overlay0 #6c7086;
+@define-color ctp-surface2 #585b70;
+@define-color ctp-surface1 #45475a;
+@define-color ctp-surface0 #313244;
+@define-color ctp-base #1e1e2e;
+@define-color ctp-mantle #181825;
+@define-color ctp-crust #11111b;
+
+* {
+  font-family: "Inter", "SF Pro Display", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* Control Center Background */
+.control-center {
+  background: alpha(@ctp-base, 0.95);
+  border: 2px solid @ctp-surface1;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.control-center-list-placeholder {
+  opacity: 0.7;
+  color: @ctp-subtext0;
+  font-size: 16px;
+  margin: 24px;
+  text-align: center;
+}
+
+/* Widget Title */
+.widget-title {
+  background: linear-gradient(135deg, @ctp-surface0, @ctp-surface1);
+  color: @ctp-text;
+  padding: 16px;
+  margin: 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  border: 1px solid @ctp-surface2;
+}
+
+.widget-title > button {
+  background: @ctp-mauve;
+  color: @ctp-base;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(203, 166, 247, 0.3);
+}
+
+.widget-title > button:hover {
+  background: @ctp-lavender;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(203, 166, 247, 0.4);
+}
+
+.widget-title > button:active {
+  transform: translateY(0);
+}
+
+/* Do Not Disturb Widget */
+.widget-dnd {
+  background: linear-gradient(135deg, @ctp-surface0, @ctp-surface1);
+  color: @ctp-text;
+  padding: 16px;
+  margin: 12px;
+  border-radius: 12px;
+  border: 1px solid @ctp-surface2;
+}
+
+.widget-dnd > switch {
+  background: @ctp-surface2;
+  border-radius: 24px;
+  min-width: 48px;
+  min-height: 24px;
+  transition: all 0.3s ease;
+}
+
+.widget-dnd > switch:checked {
+  background: @ctp-mauve;
+  box-shadow: 0 0 12px rgba(203, 166, 247, 0.4);
+}
+
+.widget-dnd > switch slider {
+  background: @ctp-text;
+  border-radius: 50%;
+  margin: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Notification Rows */
+.notification-row {
+  background: transparent;
+  outline: none;
+  margin: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+  background: alpha(@ctp-surface0, 0.5);
+  border-radius: 12px;
+  transform: scale(1.02);
+}
+
+/* Individual Notifications */
+.notification {
+  background: linear-gradient(135deg, alpha(@ctp-surface0, 0.9), alpha(@ctp-surface1, 0.9));
+  border: 1px solid @ctp-surface2;
+  border-radius: 12px;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.notification:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  border-color: @ctp-mauve;
+  background: linear-gradient(135deg, alpha(@ctp-surface1, 0.9), alpha(@ctp-surface2, 0.9));
+}
+
+.notification.critical {
+  border-color: @ctp-red;
+  background: linear-gradient(135deg, alpha(@ctp-surface0, 0.9), alpha(@ctp-red, 0.15));
+  box-shadow: 0 6px 20px rgba(243, 139, 168, 0.3);
+}
+
+.notification.low {
+  opacity: 0.85;
+  border-color: @ctp-surface1;
+}
+
+/* Notification Content */
+.notification-content {
+  background: transparent;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.notification-default-action {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  color: @ctp-text;
+  transition: all 0.3s ease;
+}
+
+.notification-default-action:hover {
+  background: alpha(@ctp-mauve, 0.15);
+}
+
+/* Text Elements */
+.summary {
+  color: @ctp-text;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.body {
+  color: @ctp-subtext1;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.time {
+  color: @ctp-subtext0;
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Icons */
+.notification-app-icon {
+  border-radius: 8px;
+  margin-right: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notification-icon {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button */
+.close-button {
+  background: @ctp-surface2;
+  color: @ctp-text;
+  border: none;
+  border-radius: 50%;
+  min-width: 28px;
+  min-height: 28px;
+  margin: 8px;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-button:hover {
+  background: @ctp-red;
+  color: @ctp-base;
+  transform: scale(1.15) rotate(90deg);
+  box-shadow: 0 4px 12px rgba(243, 139, 168, 0.4);
+}
+
+/* Notification Actions */
+.notification-action {
+  background: @ctp-surface1;
+  color: @ctp-text;
+  border: 1px solid @ctp-surface2;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 6px;
+  font-weight: 500;
+  font-size: 13px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.notification-action:hover {
+  background: @ctp-mauve;
+  color: @ctp-base;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(203, 166, 247, 0.3);
+}
+
+.notification-action:active {
+  transform: translateY(0);
+}
+
+/* Floating Notifications (Popup) */
+.floating-notifications {
+  background: transparent;
+}
+
+.floating-notifications .notification-row .notification {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  border: 2px solid @ctp-surface1;
+  backdrop-filter: blur(20px);
+}
+
+/* Notification Groups */
+.notification-group {
+  background: linear-gradient(135deg, @ctp-surface0, @ctp-surface1);
+  border-radius: 12px;
+  margin: 6px 12px;
+  padding: 12px;
+  border: 1px solid @ctp-surface2;
+}
+
+.notification-group-headers {
+  background: @ctp-surface1;
+  color: @ctp-text;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.notification-group-icon {
+  color: @ctp-mauve;
+  margin-right: 8px;
+}
+
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+  background: @ctp-surface2;
+  color: @ctp-text;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin: 0 4px;
+  font-weight: 500;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.notification-group-collapse-button:hover,
+.notification-group-close-all-button:hover {
+  background: @ctp-mauve;
+  color: @ctp-base;
+  transform: translateY(-1px);
+}
+
+/* Scrollbar */
+scrollbar {
+  background: transparent;
+  border-radius: 12px;
+  width: 10px;
+}
+
+scrollbar slider {
+  background: alpha(@ctp-surface2, 0.7);
+  border-radius: 12px;
+  min-height: 24px;
+  transition: all 0.3s ease;
+}
+
+scrollbar slider:hover {
+  background: @ctp-mauve;
+}
+
+/* Additional Polish */
+.notification-default-action:focus {
+  outline: 2px solid @ctp-mauve;
+  outline-offset: 2px;
+}
+
+.widget-title:hover {
+  border-color: @ctp-mauve;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.widget-dnd:hover {
+  border-color: @ctp-mauve;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}

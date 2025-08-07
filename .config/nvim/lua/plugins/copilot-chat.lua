@@ -7,7 +7,7 @@ return {
 	},
 	build = "make tiktoken", -- Only on MacOS or Linux
 	opts = {
-		backenf = "agent", -- Use 'agent' backend for Copilot Chat
+		backend = "agent", -- Use 'agent' backend for Copilot Chat
 		question_header = "## User ",
 		answer_header = "## Copilot ",
 		error_header = "## Error ",

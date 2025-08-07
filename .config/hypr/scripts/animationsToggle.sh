@@ -4,8 +4,8 @@
 
 if [[ "$animationsState" -eq 1 ]]  ; then
     hyprctl keyword animations:enabled 0
-    dunstify "Animations" "Disabled"
+    notify-send "Animations" "Disabled" -a "hyprland-icon" -i "$HOME/.icons/hyprland.png" -t 3000
 else
     hyprctl keyword animations:enabled 1
-    dunstify "Animations" "Enabled"
+    notify-send "Animations" "Enabled" -a "hyprland-icon" -i "$HOME/.icons/hyprland.png" -t 3000
 fi

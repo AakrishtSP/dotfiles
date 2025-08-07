@@ -16,6 +16,7 @@
     "modules-center": ["mpris"],
     "modules-right": [
       "group/tray-expand",
+      "custom/notification",
       "custom/updates",
       "idle_inhibitor",
       "battery",
