@@ -27,11 +27,6 @@ if type -q bat
     set -xU MANROFFOPT "-c"
 end
 
-if type -q less
-    set -xU LESS "FRX"
-    set -xU LESSHISTFILE /dev/null
-end
-
 if type -q fzf
     set -xU FZF_DEFAULT_COMMAND "fd --type f --hidden --follow --exclude .git"
     set -xU FZF_CTRL_T_COMMAND "fd --type f --hidden --follow --exclude .git"
@@ -72,27 +67,27 @@ end
 # Variables can be expanded, e.g., PATH="$HOME/bin:$PATH"
 # This is a simple parser, it does not handle complex cases like multi-line values or escaped
 
-if test -f ~/.config/.env
-    for line in (grep -v '^\s*#' ~/.config/.env | grep -v '^\s*$')
-        # Split at first =
-        set key (string split -m 1 '=' $line)[1]
-        set val (string split -m 1 '=' $line)[2]
-        
-        # Expand variables manually for PATH or others if needed
-        # This example handles $HOME and $PATH expansion in val
-        if string match -q '*$HOME*' $val
-            set val (string replace '$HOME' $HOME $val)
-        end
-        if string match -q '*$PATH*' $val
-            set val (string replace '$PATH' $PATH $val)
-        end
-        
-        # Remove surrounding quotes if present (e.g., "...")
-        if string match -qr '^".*"$' $val
-            set val (string trim $val '"')
-        end
-        
-        # Export
-        set -gx $key $val
-    end
-end
+# if test -f ~/.config/.env
+#     for line in (grep -v '^\s*#' ~/.config/.env | grep -v '^\s*$')
+#         # Split at first =
+#         set key (string split -m 1 '=' $line)[1]
+#         set val (string split -m 1 '=' $line)[2]
+#
+#         # Expand variables manually for PATH or others if needed
+#         # This example handles $HOME and $PATH expansion in val
+#         if string match -q '*$HOME*' $val
+#             set val (string replace '$HOME' $HOME $val)
+#         end
+#         if string match -q '*$PATH*' $val
+#             set val (string replace '$PATH' $PATH $val)
+#         end
+#
+#         # Remove surrounding quotes if present (e.g., "...")
+#         if string match -qr '^".*"$' $val
+#             set val (string trim $val '"')
+#         end
+#
+#         # Export
+#         set -gx $key $val
+#     end
+# end
