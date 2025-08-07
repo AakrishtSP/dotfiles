@@ -1,0 +1,103 @@
+# Ignore common clutter and cache
+*.swp
+*.swo
+*.bak
+*.tmp
+*~
+.cache/
+Trash/
+npm-debug.log
+.DS_Store
+.idea/
+.vscode/
+.clangd/
+.android/
+.arduino*/
+.cargo/
+
+# Browser & Editor junk
+.mozilla/
+.chromium/
+.google-chrome/
+.config/BraveSoftware/
+.config/chromium/
+.config/google-chrome/
+.config/Code*/ # VS Code
+
+# Session or state files
+.Xauthority
+.Xsession*
+.lesshst
+.python_history
+.bash_history
+.zsh_history
+.fish_history
+.node_repl_history
+mysql_history
+sqlite_history
+
+# SSH and auth secrets
+.ssh/
+.gnupg/
+.local/share/keyrings/
+.config/keepassxc/
+.config/gnome-keyring/
+
+# System-specific configs
+/etc/
+.var/
+run/
+tmp/
+
+# Desktop environments
+.config/kde*
+.kde/
+.config/plasma*
+.config/dconf/
+.config/xfce*
+.config/lxqt/
+
+# Hyprland / Wayland session junk (keep config if you version it)
+.hyprland.log
+.hyprland.conf.bak
+
+# Ignore yadm-related backups
+.yadm/archive/
+.yadm/encrypt/
+.yadm/files.gpg
+
+# Ignore build artifacts (if you keep scripts/tools in dotfiles)
+**/target/
+**/build/
+**/dist/
+*.o
+*.out
+*.a
+*.so
+*.pyc
+__pycache__/
+
+# Ignore package manager stuff
+.config/pip/
+.config/yarn/
+.config/npm/
+.local/share/pip/
+.local/lib/python*/
+
+# Logs
+*.log
+*.journal
+
+# Cursor state & GUI session junk
+.Xresources-backup
+.qt*
+gtkrc*
+gtk-*
+
+# Ignore big or machine-specific config dirs
+.local/share/Trash/
+.local/state/
+.local/share/Steam/
+.local/share/flatpak/
+.local/share/JetBrains/
+
