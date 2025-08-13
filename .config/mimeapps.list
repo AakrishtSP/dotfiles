@@ -61,3 +61,4 @@ x-scheme-handler/discord-418076578333851669=discord-418076578333851669.desktop
 x-scheme-handler/betterdiscord=discord.desktop
 text/x-csrc=nvim-in-foot.desktop
 x-scheme-handler/mailto=zen.desktop
+x-scheme-handler/discord=equibop.desktop

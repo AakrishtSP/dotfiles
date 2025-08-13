@@ -21,9 +21,9 @@ else if test (uname) = Darwin
     set -g OS_TYPE macos
 end
 
-# Set MANPAGER only if bat is available
+# # Set MANPAGER only if bat is available
 if type -q bat
-    set -xU MANPAGER "sh -c 'col -bx | bat -l man -p'"
+    set -xU MANPAGER "sh -c 'col -bx | bat -l man --paging=always'"
     set -xU MANROFFOPT "-c"
 end
 
