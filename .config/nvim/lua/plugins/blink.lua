@@ -10,7 +10,6 @@ return {
 		},
 	},
 	build = "cargo build --release",
-
 	---@module 'blink.cmp'
 	---@type blink.cmp.Config
 	opts = {
@@ -19,19 +18,17 @@ return {
 			["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
 			["<C-e>"] = { "hide", "fallback" },
 			["<CR>"] = { "accept", "fallback" },
-			["<Tab>"] = { "snippet_forward", "select_next", "fallback" },
-			["<S-Tab>"] = { "snippet_backward", "select_prev", "fallback" },
+			-- ["<Tab>"] = { "snippet_forward", "select_next", "fallback" },
+			-- ["<S-Tab>"] = { "snippet_backward", "select_prev", "fallback" },
 			["<C-j>"] = { "select_next", "fallback" },
 			["<C-k>"] = { "select_prev", "fallback" },
 			["<C-d>"] = { "scroll_documentation_down", "fallback" },
 			["<C-u>"] = { "scroll_documentation_up", "fallback" },
 		},
-
 		appearance = {
 			use_nvim_cmp_as_default = true,
 			nerd_font_variant = "mono",
 		},
-
 		completion = {
 			accept = {
 				auto_brackets = {
@@ -67,11 +64,9 @@ return {
 				},
 			},
 		},
-
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
 			per_filetype = {
-				lua = { "lsp", "path", "snippets", "buffer" },
 				gitignore = { "path", "buffer" },
 				gitattributes = { "path", "buffer" },
 				gitmodules = { "path", "buffer" },
@@ -92,13 +87,9 @@ return {
 				},
 			},
 		},
-
 		signature = { enabled = true },
-
 		snippets = { preset = "luasnip" },
-
 		fuzzy = { implementation = "prefer_rust" },
 	},
-
 	opts_extend = { "sources.default" },
 }

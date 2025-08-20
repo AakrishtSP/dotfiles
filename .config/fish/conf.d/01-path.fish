@@ -10,6 +10,14 @@ if test -d ~/.local/bin
     end
 end
 
+# Add andriod-ndk to paths
+if test -d /opt/android-ndk
+    if not contains -- /opt/android-ndk $PATH
+        set -p PATH /opt/android-ndk
+    end
+end
+
+
 # Add Termux-specific paths
 if test "$OS_TYPE" = termux
     if test -d /data/data/com.termux/files/usr/bin

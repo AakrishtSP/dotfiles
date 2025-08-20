@@ -61,33 +61,19 @@ else if test -f ~/.fish_profile
     echo "Warning: ~/.fish_profile exists but is not readable, skipping"
 end
 
-# Load environment variables from ~/.config/.env
-# This file should contain key=value pairs, one per line
-# Lines starting with # are ignored, empty lines are skipped
-# Variables can be expanded, e.g., PATH="$HOME/bin:$PATH"
-# This is a simple parser, it does not handle complex cases like multi-line values or escaped
+# Set Java Home if Android Studio exists
+if test -d /opt/android-studio/
+    set -x JAVA_HOME /opt/android-studio/jbr
+end
 
-# if test -f ~/.config/.env
-#     for line in (grep -v '^\s*#' ~/.config/.env | grep -v '^\s*$')
-#         # Split at first =
-#         set key (string split -m 1 '=' $line)[1]
-#         set val (string split -m 1 '=' $line)[2]
-#
-#         # Expand variables manually for PATH or others if needed
-#         # This example handles $HOME and $PATH expansion in val
-#         if string match -q '*$HOME*' $val
-#             set val (string replace '$HOME' $HOME $val)
-#         end
-#         if string match -q '*$PATH*' $val
-#             set val (string replace '$PATH' $PATH $val)
-#         end
-#
-#         # Remove surrounding quotes if present (e.g., "...")
-#         if string match -qr '^".*"$' $val
-#             set val (string trim $val '"')
-#         end
-#
-#         # Export
-#         set -gx $key $val
-#     end
-# end
+# Set Android SDK location
+if test -d /opt/android-sdk
+    set -x ANDROID_HOME /opt/android-sdk
+else
+    set -x ANDROID_HOME ~/Android/Sdk
+end
+
+# Set NDK_HOME to the latest installed NDK
+if test -d $ANDROID_HOME/ndk
+    set -x NDK_HOME $ANDROID_HOME/ndk/(ls -1 $ANDROID_HOME/ndk | sort -V | tail -n1)
+end
