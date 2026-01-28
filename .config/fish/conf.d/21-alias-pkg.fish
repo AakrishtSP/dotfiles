@@ -20,7 +20,7 @@ if type -q pacman
     alias fixpacman 'sudo rm -i /var/lib/pacman/db.lck'
     alias gitpkg 'pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
     alias rmpkg 'sudo pacman -Rns'
-    
+
     if type -q reflector
         # Get fastest mirrors (Arch-based systems)
         alias mirror 'sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist'
@@ -28,7 +28,7 @@ if type -q pacman
         alias mirrord 'sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist'
         alias mirrors 'sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist'
     end
-    
+
     if type -q meld
         alias pacdiff 'sudo -H DIFFPROG=meld pacdiff'
     end

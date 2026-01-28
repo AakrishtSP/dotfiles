@@ -12,7 +12,7 @@ end
 # History search (Ctrl+R)
 bind \cr 'fzf_history'
 function fzf_history
-    commandline (builtin history | fzf --height 40% --reverse --tac)
+    commandline (builtin history | fzf --height 40% --tac)
     commandline -f repaint
 end
 
