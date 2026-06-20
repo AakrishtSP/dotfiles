@@ -1,25 +1,29 @@
 return {
 	"saghen/blink.cmp",
-	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
 		"rafamadriz/friendly-snippets",
-		{
-			"L3MON4D3/LuaSnip",
-			version = "v2.*",
-			build = "make install_jsregexp",
-		},
+		"L3MON4D3/LuaSnip",
+		"giuxtaposition/blink-cmp-copilot",
 	},
+	version = "1.*",
+	event = "InsertEnter",
 	build = "cargo build --release",
-	---@module 'blink.cmp'
-	---@type blink.cmp.Config
 	opts = {
+		cmdline = {
+			enabled = false,
+			keymap = {
+				preset = "inherit",
+			},
+			completion = {
+				menu = { auto_show = true },
+				ghost_text = { enabled = true },
+			},
+		},
 		keymap = {
 			preset = "default",
 			["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
 			["<C-e>"] = { "hide", "fallback" },
 			["<CR>"] = { "accept", "fallback" },
-			-- ["<Tab>"] = { "snippet_forward", "select_next", "fallback" },
-			-- ["<S-Tab>"] = { "snippet_backward", "select_prev", "fallback" },
 			["<C-j>"] = { "select_next", "fallback" },
 			["<C-k>"] = { "select_prev", "fallback" },
 			["<C-d>"] = { "scroll_documentation_down", "fallback" },
@@ -30,42 +34,29 @@ return {
 			nerd_font_variant = "mono",
 		},
 		completion = {
-			accept = {
-				auto_brackets = {
-					enabled = true,
-				},
-			},
+			accept = { auto_brackets = { enabled = true } },
 			documentation = {
 				auto_show = true,
 				auto_show_delay_ms = 500,
 			},
-			ghost_text = {
-				enabled = true,
-			},
+			ghost_text = { enabled = false },
 			menu = {
 				draw = {
-					columns = {
-						{ "label", "label_description", gap = 1 },
-						{ "kind_icon", "kind" },
-					},
+					align_to = "cursor",
+					columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } },
 				},
 				auto_show = true,
+				direction_priority = { "s", "n" },
 				border = "rounded",
 				winhighlight = "Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
 			},
 			list = {
-				selection = {
-					preselect = true,
-					auto_insert = true,
-				},
-				cycle = {
-					from_bottom = true,
-					from_top = true,
-				},
+				selection = { preselect = true, auto_insert = true },
+				cycle = { from_bottom = true, from_top = true },
 			},
 		},
 		sources = {
-			default = { "lsp", "path", "snippets", "buffer" },
+			default = { "lsp", "path", "snippets", "buffer", "copilot" },
 			per_filetype = {
 				gitignore = { "path", "buffer" },
 				gitattributes = { "path", "buffer" },
@@ -75,6 +66,10 @@ return {
 				ignore = { "path", "buffer" },
 			},
 			providers = {
+				copilot = {
+					name = "copilot",
+					module = "blink-cmp-copilot",
+				},
 				path = {
 					opts = {
 						trailing_slash = false,

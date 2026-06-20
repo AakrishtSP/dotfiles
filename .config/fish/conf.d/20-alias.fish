@@ -62,3 +62,8 @@ end
 if type -q journalctl
     alias jctl 'journalctl -p 3 -xb' # Get the error messages from journalctl
 end
+
+if type -q xmrig
+    alias mine='sudo nice -n 19 xmrig --config=$HOME/.config/xmrig.conf'
+    alias stopmine='sudo pkill xmrig'
+end

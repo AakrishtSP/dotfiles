@@ -22,7 +22,7 @@ return {
 
 		-- Disable everything else for speed
 		popupmenu = { enabled = false },
-		notify = { enabled = false },
+		notify = { enabled = true, view = "mini" },
 
 		lsp = {
 			progress = { enabled = false },

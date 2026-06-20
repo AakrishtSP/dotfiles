@@ -1,7 +1,7 @@
 [
   {
     "layer": "top", // Waybar at top layer
-    "output": "eDP-1", // Output name
+    "output": "eDP-2", // Output name
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 40,
     // "width":1920,
@@ -27,7 +27,7 @@
   },
   {
     "layer": "top", // Waybar at top layer
-    "output": "HDMI-A-1", // Output name
+    "output": "DP-2", // Output name
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 30,
     // "width":1920,
