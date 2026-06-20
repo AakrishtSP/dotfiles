@@ -1,9 +1,0 @@
-wofi
-nwaync
-polkit-gnome
-thunar
-xorg-xrdb
-foot
-wl-clipboard
-wev
-grim

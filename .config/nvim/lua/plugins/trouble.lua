@@ -1,6 +1,7 @@
 return {
-  "folke/trouble.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+	"folke/trouble.nvim",
+	version = "v3.*",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
   opts = {
     modes = {
       lsp = {

@@ -1,3 +1,5 @@
 require("user.options")
 require("config.lazy")
 require("user.keymaps")
+-- Load theme after plugins (so theme plugins are available)
+require("user.theme").setup()

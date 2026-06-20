@@ -62,3 +62,5 @@ end
 if type -q journalctl
     alias jctl 'journalctl -p 3 -xb' # Get the error messages from journalctl
 end
+
+

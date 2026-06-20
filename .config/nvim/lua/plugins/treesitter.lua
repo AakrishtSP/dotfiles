@@ -8,9 +8,19 @@ return {
 		ensure_installed = {
 			"lua",
 			"typescript",
+			"javascript",
 			"python",
 			"rust",
+			"c",
+			"cpp",
+			"zig",
 			"bash",
+			"html",
+			"css",
+			"json",
+			"yaml",
+			"markdown",
+			"markdown_inline",
 		},
 		auto_install = true,
 		highlight = {
@@ -31,6 +41,10 @@ return {
 		},
 	},
 	config = function(_, opts)
-		require("nvim-treesitter.configs").setup(opts)
+		local ok, ts_configs = pcall(require, "nvim-treesitter.configs")
+		if not ok then
+			return
+		end
+		ts_configs.setup(opts)
 	end,
 }

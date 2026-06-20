@@ -3,8 +3,10 @@ vim.cmd("set expandtab")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set tabstop=4")
+vim.wo.relativenumber = true
 vim.g.mapleader = " "
-
+vim.opt.wildmenu = true
+vim.opt.wildmode = "longest:full"
 -- Enhanced file type detection for git-related files
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
 	pattern = {
@@ -190,3 +192,10 @@ vim.api.nvim_create_user_command("FormatStaged", function()
 
 	print("Formatted & re-staged " .. count .. " file(s).")
 end, {})
+
+-- Prolog for .pl files
+vim.filetype.add({
+	extension = {
+		pl = "prolog",
+	},
+})

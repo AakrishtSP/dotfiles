@@ -1,0 +1,8 @@
+[sie][Limiter#0]
+release=20
+threshold=-1.5
+
+[soe][Limiter#0]
+attack=7
+release=12
+threshold=-2.5

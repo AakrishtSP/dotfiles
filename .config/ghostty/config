@@ -1,0 +1,8 @@
+# ~/.config/ghostty/config
+
+confirm-close-surface = false
+
+# open tmux on launch
+command = tmux new-session -A -s main
+# don't copy on select (only copy on explicit C-c or right-click)
+copy-on-select = false

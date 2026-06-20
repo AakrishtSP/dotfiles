@@ -10,6 +10,19 @@ if test -d ~/.local/bin
     end
 end
 
+# Add ~/.local/scripts to PATH (with security checks)
+if test -d ~/.local/scripts
+    # For Termux, ownership check might not work as expected
+    if test "$OS_TYPE" = termux; or test -O ~/.local/scripts
+        if not contains -- ~/.local/scripts $PATH
+            set -p PATH ~/.local/scripts
+        end
+    else
+        echo "Warning: ~/.local/scripts exists but is not owned by current user, not adding to PATH"
+    end
+end
+
+
 # Add andriod-ndk to paths
 if test -d /opt/android-ndk
     if not contains -- /opt/android-ndk $PATH

@@ -3,6 +3,17 @@
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
 
+# Set Android SDK location
+if type -q nvim
+    set -x EDITOR nvim
+    set -x VISUAL nvim
+else if type -q micro
+    set -x EDITOR micro
+    set -x VISUAL micro
+else
+    set -x EDITOR nano
+end
+
 # Detect OS for conditional configuration
 set -g OS_TYPE unknown
 if test -f /data/data/com.termux/files/usr/bin/fish

@@ -21,6 +21,14 @@ vim.keymap.set("i", "?", "?<C-g>u", { desc = "Break undo sequence" })
 vim.keymap.set("i", ";", ";<C-g>u", { desc = "Break undo sequence" })
 vim.keymap.set("i", ":", ":<C-g>u", { desc = "Break undo sequence" })
 
+-- Escape safety fallbacks (when terminal/IME/swallowed mappings interfere)
+vim.keymap.set("i", "<Esc>", "<Esc>", { noremap = true, silent = true, desc = "Exit Insert Mode" })
+vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true, silent = true, desc = "Exit Insert Mode (Ctrl-C)" })
+vim.keymap.set("c", "<Esc>", "<C-c>", { noremap = true, silent = true, desc = "Exit Command-line" })
+vim.keymap.set("c", "<C-c>", "<C-c>", { noremap = true, silent = true, desc = "Exit Command-line (Ctrl-C)" })
+vim.keymap.set("i", "<C-[>", "<Esc>", { noremap = true, silent = true, desc = "Exit Insert Mode (Ctrl-[)" })
+vim.keymap.set("c", "<C-[>", "<C-c>", { noremap = true, silent = true, desc = "Exit Command-line (Ctrl-[)" })
+
 -- Update system keymaps
 vim.keymap.set("n", "<leader>uu", ":UpdateAll<CR>", { desc = "Update All (Plugins, LSP, Tools)" })
 vim.keymap.set("n", "<leader>up", ":UpdatePlugins<CR>", { desc = "Update Plugins Only" })
