@@ -3,16 +3,35 @@
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
 
-# Set Android SDK location
+if test -f "$HOME/.config"
+    set -x XDG_CONFIG_HOME "$HOME/.config"
+else
+    set -x XDG_CONFIG_HOME "$HOME/.config"
+end
+
+# Set Editor
 if type -q nvim
     set -x EDITOR nvim
     set -x VISUAL nvim
+else if type -q helix
+    set -x EDITOR helix
+    set -x VISUAL helix
 else if type -q micro
     set -x EDITOR micro
     set -x VISUAL micro
 else
     set -x EDITOR nano
 end
+
+# Set Terminal
+if type -q kitty
+    set -x TERM kitty
+else if type -q ghostty
+     set -x TERM ghostty
+else if type -q alacritty
+    set -x TERM alacritty
+end
+
 
 # Detect OS for conditional configuration
 set -g OS_TYPE unknown

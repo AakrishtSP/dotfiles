@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "configurations": [
+    {
+      "id": "profile_1787499062588_0nc4qyv",
+      "name": "Default",
+      "outputs": {
+        "EDO LEN151WQXGA": {
+          "mode": "2560x1600@165.000",
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": 1.33203125,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {
+            "bitdepth": 10
+          }
+        },
+        "Dell Inc. DELL S1709W": {
+          "mode": "1440x900@59.887",
+          "position": {
+            "x": 1920,
+            "y": 0
+          },
+          "scale": 1,
+          "transform": "Normal",
+          "vrr": false,
+          "disabled": false,
+          "hyprland": {}
+        }
+      }
+    }
+  ]
+}

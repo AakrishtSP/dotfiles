@@ -29,8 +29,6 @@ require("hyprland.execs")
 require("hyprland.rules")
 require("hyprland.gestures")
 require("hyprland.keybinds")
-require("hyprland.permissions")
-
 
 -- DMS Include Configs
 require("dms.layout")
@@ -38,4 +36,3 @@ require("dms.windowrules")
 require("dms.outputs")
 require("dms.binds")
 require("dms.binds-user")
-require("dms.cursor")

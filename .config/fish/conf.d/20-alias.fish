@@ -1,14 +1,18 @@
 # Replace ls with eza
 if type -q eza
-    alias ls 'eza -al --color=always --group-directories-first --icons' # preferred listing
-    alias la 'eza -a --color=always --group-directories-first --icons'  # all files and dirs
-    alias ll 'eza -l --color=always --group-directories-first --icons'  # long format
-    alias lt 'eza -aT --color=always --group-directories-first --icons' # tree listing
-    alias l. 'eza -ald --color=always --group-directories-first --icons .*' # show only dotfiles
+    alias ls 'eza -al --color=always --group-directories-first --icons auto' # preferred listing
+    alias la 'eza -a --color=always --group-directories-first --icons auto'  # all files and dirs
+    alias ll 'eza -l --color=always --group-directories-first --icons auto'  # long format
+    alias lt 'eza -aT --color=always --group-directories-first --icons auto' # tree listing
+    alias l. 'eza -ald --color=always --group-directories-first --icons auto .*' # show only dotfiles
 end
 # Replace some more things with better alternatives
 if type -q bat
     alias cat 'bat --style header --style snip --style changes --style header'
+end
+
+if type -q anyzig && not type -q zig
+    alias zig 'anyzig'
 end
 
 # Common use
@@ -62,5 +66,3 @@ end
 if type -q journalctl
     alias jctl 'journalctl -p 3 -xb' # Get the error messages from journalctl
 end
-
-

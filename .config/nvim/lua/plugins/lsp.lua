@@ -1,7 +1,7 @@
 return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
-	ft = { "lua", "javascript", "typescript", "c", "cpp", "rust", "zig", "html", "css", "json", "yaml" },
+	ft = { "lua", "javascript", "typescript", "c", "cpp", "rust", "zig", "html", "css", "json", "yaml", "qml" },
 	dependencies = {
 		{ "williamboman/mason.nvim", cmd = "Mason", opts = { ui = { border = "rounded" } } },
 		{ "williamboman/mason-lspconfig.nvim", lazy = true },
@@ -68,6 +68,7 @@ return {
 			cssls = {},
 			jsonls = {},
 			yamlls = {},
+            qmlls = {},
 		}
 
 		local ensure_installed = { "lua_ls", "clangd", "rust_analyzer", "zls" }
@@ -102,6 +103,7 @@ return {
 				css = "cssls",
 				json = "jsonls",
 				yaml = "yamlls",
+                qml="qmlls",
 			}
 			local server = ft_servers[vim.bo.filetype]
 			if server then
